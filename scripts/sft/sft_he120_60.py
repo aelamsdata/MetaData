@@ -1,7 +1,7 @@
 EQTIME = 10
 REFDET = 'Cup'
 REFISO = 'He4'
-NCOUNTS = 600
+NCOUNTS = 120
 
 def main():
     info('Debug measurement script')
