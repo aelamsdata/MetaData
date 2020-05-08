@@ -2,7 +2,6 @@ EQTIME = 10
 REFDET = 'Cup'
 REFISO = 'He4'
 NCOUNTS = 120
-BASELINE_NCOUNTS = 60
 
 def main():
     info('Debug measurement script')
@@ -15,8 +14,6 @@ def main():
     set_fits()
     multicollect(ncounts=NCOUNTS)
     
-    
-    #baselines(ncounts=BASELINE_NCOUNTS, detector=REFDET, mass=3.1)
     
 # ========== EOF ==========
     
