@@ -56,20 +56,22 @@ def sleep_minutes(x):
 def main():
     info('Post eq script')
     # stuff to do after equilibration with the ms is enter here
-    sleep(5)
+    # Clean out S.9 + Cryo
+    open('V15')
+    
     
 # ========== EOF ==========
 
     
 #===============================================================================
-# POST MEASUREMENT SCRIPT sft_he.py
+# POST MEASUREMENT SCRIPT sft_he_post_meas.py
 #===============================================================================
 
 def sleep_minutes(x):
     sleep(x*60)
     
 def main():
-    info('Post measurement script')
+    info('Post measurement script | Pumping SFT')
     # stuff to do post measurement
     open('A')
     

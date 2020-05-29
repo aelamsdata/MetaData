@@ -5,7 +5,9 @@ def sleep_minutes(x):
 def main():
     info('Post eq script')
     # stuff to do after equilibration with the ms is enter here
-    sleep(5)
+    # Clean out S.9 + Cryo
+    open('V15')
+    
     
 # ========== EOF ==========
 
