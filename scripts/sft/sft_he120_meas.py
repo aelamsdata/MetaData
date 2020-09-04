@@ -4,6 +4,10 @@ NCOUNTS = 960
 
 def main():
     
+    #Enable SEM
+    #raw_spectrometer_command('SetParameter ESA pos. Set, 528.6')
+    #raw_spectrometer_command('SetParameter ESA neg. Set, 528.6')
+    #raw_spectrometer_command('SetParameter CDD Supply Set, 1950.6')
     
     set_spectrometer_configuration('he_400')
     info('Debug measurement script')
@@ -23,7 +27,11 @@ def main():
     set_fits()
     multicollect(ncounts=NCOUNTS)
     
-    
+    #Protect SEM
+    raw_spectrometer_command('SetParameter ESA pos. Set, 0')
+    raw_spectrometer_command('SetParameter ESA neg. Set, 0')
+    raw_spectrometer_command('SetParameter CDD Supply Set, 0')
+
 # ========== EOF ==========
     
     
