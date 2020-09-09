@@ -1,13 +1,14 @@
 REFDET = 'Cup'
 REFISO = 'He4'
-NCOUNTS = 960
+NCOUNTS = 300
+#changed 960 to 300
 
 def main():
     
     #Enable SEM
-    #raw_spectrometer_command('SetParameter ESA pos. Set, 528.6')
-    #raw_spectrometer_command('SetParameter ESA neg. Set, 528.6')
-    #raw_spectrometer_command('SetParameter CDD Supply Set, 1950.6')
+    raw_spectrometer_command('SetParameter ESA pos. Set, 528.6')
+    raw_spectrometer_command('SetParameter ESA neg. Set, 528.6')
+    raw_spectrometer_command('SetParameter CDD Supply Set, 1950.6')
     
     set_spectrometer_configuration('he_400')
     info('Debug measurement script')

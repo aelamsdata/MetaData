@@ -116,7 +116,7 @@ def main():
     info('Post eq script')
     # stuff to do after equilibration with the ms is enter here
     # Clean out S.9 + Cryo
-    open('V15')
+    # open('V15')
     
     
 # ========== EOF ==========
@@ -132,7 +132,8 @@ def sleep_minutes(x):
 def main():
     info('Post measurement script | Pumping SFT')
     # stuff to do post measurement
-    open('A')
+                
+    # open('A')
     
 # ========== EOF ==========
  
