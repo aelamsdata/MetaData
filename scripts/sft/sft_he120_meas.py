@@ -1,6 +1,7 @@
 REFDET = 'Cup'
 REFISO = 'He4'
-NCOUNTS = 960
+NCOUNTS = 100
+#changed 960 to 100 for testing
 
 def main():
     
@@ -31,6 +32,7 @@ def main():
     raw_spectrometer_command('SetParameter ESA pos. Set, 0')
     raw_spectrometer_command('SetParameter ESA neg. Set, 0')
     raw_spectrometer_command('SetParameter CDD Supply Set, 0')
+    position_magnet('Ne22', detector='Cup')
 
 # ========== EOF ==========
     
