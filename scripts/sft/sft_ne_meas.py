@@ -5,7 +5,7 @@ def main():
     
     
     set_spectrometer_configuration('ne_200')
-    info('Debug measurement script')
+    info('Ne Counting')
     activate_detectors('Cup')
     # position_magnet(REFISO, REFDET)
     
@@ -28,7 +28,7 @@ def main():
     
     set_fits()
     
-    peak_hop(hops=hops, ncycles=6)
+    peak_hop(hops=hops, ncycles=8)
     
 # ========== EOF ==========
     
