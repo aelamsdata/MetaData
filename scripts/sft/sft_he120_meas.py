@@ -1,7 +1,6 @@
 REFDET = 'Cup'
 REFISO = 'He4'
-NCOUNTS = 300
-#changed 960 to 300
+NCOUNTS = 960
 
 def main():
     
