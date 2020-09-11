@@ -32,7 +32,7 @@ def main():
     raw_spectrometer_command('SetParameter ESA pos. Set, 0')
     raw_spectrometer_command('SetParameter ESA neg. Set, 0')
     raw_spectrometer_command('SetParameter CDD Supply Set, 0')
-    position_magnet('Ne22', detector='Cup')
+    position_magnet('Ne22', detector='Cup', for_collection=False)
 
 # ========== EOF ==========
     
