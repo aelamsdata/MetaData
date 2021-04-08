@@ -12,12 +12,14 @@ def main():
     info('Test Air Standard Run')
     info('Setting cryo to 120 Kelvin')
     set_cryo(120)
+    close('V6')
+    close('V4')
+    sleep(3)
     
     info('Filling 100ul pipette')
     open('V5')
     info('Equilibrating | 1 minute')
-    sleep_minutes(1)
-    
+    sleep_minutes(1)    
     pressure = store_manometer_pressure()
     info('Baraton pressure={}'.format(pressure))
     close('V5')
@@ -39,7 +41,7 @@ def main():
     #open V8
     open('V8')
     info('Equilibrating | 6 minutes')
-    sleep_minutes(6)
+    sleep_minutes(10)
     #close V11; Close V12
     close('V11')
     close('V12')
@@ -53,6 +55,7 @@ def main():
     
     #Close V15; Open V14
     close('V15')
+    close('V9')
     open('V14')
     sleep(3)
     #Open V13
@@ -62,10 +65,10 @@ def main():
     setpoint = 5
     
     info('Freezing Helium onto Cryo | 12 minutes')
-    set_cryo(setpoint)
+    set_cryo(5)
     sleep_minutes(12)
     #Check to ensure temp is reached
-    
+    setpoint = 5
     info('Confirming setpoint reached')
     while True:
         v = get_cryo_temp('b')
@@ -96,7 +99,7 @@ def main():
     #Close V14
     close('V14')
     sleep(1)
-    set_cryo(30)
+    set_cryo(28)
     sleep_minutes(5)
     
     #Close V15
@@ -104,6 +107,7 @@ def main():
     sleep(3)
     #Open V14
     open('V14')
+    open('V9')
     sleep_minutes(1)     
 #===============================================================================
 # POST EQUILIBRATION SCRIPT sft_post_eq_he.py
