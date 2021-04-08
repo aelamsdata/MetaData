@@ -16,9 +16,9 @@ def main():
     #Close V14
     close('V14')
     info('Warming Cryo to 80 Kelvin')
-    setpoint=80
+    setpoint=50
     set_cryo(setpoint)
-    sleep_minutes(8)
+    sleep_minutes(10)
     
     info('Confirming setpoint reached')
     while True:
@@ -36,6 +36,7 @@ def main():
     close('V15')
     sleep(3)
     open('V14')
+    open('V9')
 #===============================================================================
 # POST EQUILIBRATION SCRIPT sft_post_eq_ne.py
 #===============================================================================
@@ -62,8 +63,10 @@ def main():
     info('Post measurement script | Pumping SFT')
     # stuff to do post measurement
     open('A')
-    
-    
-   # set_cryo(140)
+    open('V13')
+    set_cryo(140)
+    sleep_minutes(10)
+    close('V13')
+    open('V15')
     
 # ========== EOF ==========

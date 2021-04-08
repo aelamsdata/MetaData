@@ -6,8 +6,10 @@ def main():
     info('Post measurement script | Pumping SFT')
     # stuff to do post measurement
     open('A')
-    
-    
-   # set_cryo(140)
+    open('V13')
+    set_cryo(140)
+    sleep_minutes(10)
+    close('V13')
+    open('V15')
     
 # ========== EOF ==========
