@@ -25,7 +25,7 @@ def main():
     # EQtime is a special variable, when the analysis is running pychron will set eqtime to the value set by the extraction script.
     sniff(eqtime)
     
-    peak_center(detector=REFDET, isotope=REFISO)
+    peak_center(detector=REFDET, isotope=REFISO, config_name='He_4')
     
     set_fits()
     multicollect(ncounts=NCOUNTS)
