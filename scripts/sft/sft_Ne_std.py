@@ -15,14 +15,14 @@ def main():
     #Releasing_Neon
     #Close V14
     close('V14')
-    info('Warming Cryo to 80 Kelvin')
-    setpoint=50
+    info('Warming Cryo to 50 Kelvin')
+    setpoint=60
     set_cryo(setpoint)
     sleep_minutes(10)
     
     info('Confirming setpoint reached')
     while True:
-        v = get_cryo_temp('b')
+        v = get_cryo_temp('a')
         if v and v < setpoint:
             # cryo temp is less than setpoint. wait 1 second then check again
             sleep(1)
@@ -37,6 +37,7 @@ def main():
     sleep(3)
     open('V14')
     open('V9')
+    sleep_minutes(1)
 #===============================================================================
 # POST EQUILIBRATION SCRIPT sft_post_eq_ne.py
 #===============================================================================
