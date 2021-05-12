@@ -16,13 +16,13 @@ def main():
     close('V4')
     sleep(3)
     
-    info('Filling 100ul pipette')
-    open('V5')
+    info('Filling 400ul pipette')
+    open('V3')
     info('Equilibrating | 1 minute')
     sleep_minutes(1)    
     pressure = store_manometer_pressure()
     info('Baraton pressure={}'.format(pressure))
-    close('V5')
+    close('V3')
     
     #Close V8; Close V1-12
     close('V8')
@@ -30,11 +30,11 @@ def main():
     sleep(10)
     
     #Open V6
-    open('V6')
+    open('V4')
     info('Equilibrating | 1 minute')
     sleep_minutes(1)
     #Close V6
-    close('V6')
+    close('V4')
     #acquire(Convec_Gauge_Value) #not critical, this is just a check.
     
     info('Freezing condensables - N2, O2, Ar, CO2, etc')
